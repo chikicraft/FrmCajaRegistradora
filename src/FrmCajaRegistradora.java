@@ -100,3 +100,5 @@ public class FrmCajaRegistradora extends JFrame {
         SwingUtilities.invokeLater(FrmCajaRegistradora::new);
     }
 }
+
+//Echo por chiki
