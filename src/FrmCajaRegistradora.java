@@ -101,4 +101,4 @@ public class FrmCajaRegistradora extends JFrame {
     }
 }
 
-//Echo por chiki
+//Echo por Juan David Rojas Villegas
