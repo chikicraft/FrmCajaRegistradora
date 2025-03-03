@@ -13,9 +13,8 @@ public class FrmCajaRegistradora extends JFrame {
         setTitle("Calculadora de Devuelta");
         setSize(650, 650);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLayout(null); // Usar diseño nulo para coordenadas exactas
+        setLayout(null);
 
-        // Etiqueta y campo de texto
         JLabel lblDevuelta = new JLabel("Monto a Devolver:");
         lblDevuelta.setBounds(20, 20, 120, 30);
         add(lblDevuelta);
@@ -24,19 +23,16 @@ public class FrmCajaRegistradora extends JFrame {
         campoDevuelta.setBounds(150, 20, 150, 30);
         add(campoDevuelta);
 
-        // Botón
         JButton btnCalcular = new JButton("Calcular Devuelta");
         btnCalcular.setBounds(330, 19, 150, 30);
         add(btnCalcular);
 
-        // Tabla para mostrar resultados
         modeloTabla = new DefaultTableModel(new String[]{"Denominación", "Tipo", "Cantidad"}, 0);
         tabla = new JTable(modeloTabla);
         JScrollPane scrollTabla = new JScrollPane(tabla);
         scrollTabla.setBounds(20, 70, 600, 300);
         add(scrollTabla);
 
-        // Tabla para modificar existencias
         modeloExistencias = new DefaultTableModel(new String[]{"Denominación", "Existencia"}, 0);
         tablaExistencias = new JTable(modeloExistencias);
         JScrollPane scrollExistencias = new JScrollPane(tablaExistencias);
@@ -45,7 +41,6 @@ public class FrmCajaRegistradora extends JFrame {
 
         inicializarExistencias();
 
-        // Acciones de los botones
         btnCalcular.addActionListener(e -> calcularDevuelta());
 
         tablaExistencias.getModel().addTableModelListener(e -> actualizarExistencias());
